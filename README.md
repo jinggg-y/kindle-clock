@@ -5,4 +5,4 @@ There are a lot of dusts on it
 <br>
 Let's use it as a clock
 <br>
-And get more dusts on it
+Get more dusts on it
