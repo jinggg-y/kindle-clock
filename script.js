@@ -12,7 +12,7 @@ function Time(){
     day = days[day - 1];
     month += 1;
 
-    document.getElementById("clock").innerText = d.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
+    document.getElementById("clock").innerText = d.toLocaleTimeString('en-AU', {hour: '2-digit', minute: '2-digit'})
     document.getElementById("day").innerText = day;
     document.getElementById("date").innerText = date + "/" + month + "/" + year;
      // Set Timer to 0.5 minute (30000 ms)
