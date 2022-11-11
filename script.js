@@ -1,7 +1,7 @@
 function Time(){
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-    var d = new Date();
+    var d = new Date().toLocaleString("en-AU", {timeZone: "Australia/Brisbane"});
     var hour = d.getHours();
     var minute = d.getMinutes();
     var day = d.getDay();
