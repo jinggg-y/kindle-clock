@@ -2,6 +2,7 @@ function Time(){
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
     var d = new Date();
+    d.toLocaleString('en', {timeZone: 'Australia/brisbane'});
     var hour = d.getHours();
     var minute = d.getMinutes();
     var day = d.getDay();
@@ -9,10 +10,12 @@ function Time(){
     var month = d.getMonth();
     var year = d.getFullYear();
 
+    hour = update(hour);
+    minute = update(minute);
     day = days[day - 1];
     month += 1;
 
-    document.getElementById("clock").innerText = d.toLocaleTimeString('en-AU', {hour: '2-digit', minute: '2-digit'})
+    document.getElementById("clock").innerText = hour + ":" + minute
     document.getElementById("day").innerText = day;
     document.getElementById("date").innerText = date + "/" + month + "/" + year;
      // Set Timer to 0.5 minute (30000 ms)
