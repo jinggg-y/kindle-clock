@@ -17,7 +17,7 @@ function Time(){
     document.getElementById("clock").innerText = hour + ":" + minute
     document.getElementById("day").innerText = day;
     document.getElementById("date").innerText = date + "/" + month + "/" + year;
-    document.getElementById("print").innerText = d.toString();
+    document.getElementById("print").innerText = d.toString() + d.toLocaleString("en-US", {timeZone: "Australia/Brisbane"});
     // Set Timer to 0.5 minute (30000 ms)
     setTimeout(Time, 30000);
 }
