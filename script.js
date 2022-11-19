@@ -1,9 +1,9 @@
 function Time(){
     const d = new Date()
 
-    var time = Intl.DateTimeFormat('en-GB', {timeStyle: 'short', timeZone: 'Australia/Brisbane'}).format(d);
-    var date = Intl.DateTimeFormat('en-GB', {timeZone: 'Australia/Brisbane'}).format(d);
-    var day = Intl.DateTimeFormat('en-GB', {weekday:"long", timeZone: 'Australia/Brisbane'}).format(d);
+    var time = d.toLocaleString("en-GB", {timeStyle:"short", timeZone: 'Australia/Brisbane'});
+    var date = d.toLocaleString("en-GB", {dateStyle:"short", timeZone: 'Australia/Brisbane'});
+    var day =  d.toLocaleString('en-GB', {weekday:"long", timeZone: 'Australia/Brisbane'});
 
     document.getElementById("clock").innerText = time
     document.getElementById("day").innerText = day;
