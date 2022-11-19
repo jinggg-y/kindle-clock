@@ -1,7 +1,9 @@
 function Time(){
-    var time = Intl.DateTimeFormat('en-GB', {timeStyle: 'short', timeZone: 'Australia/Brisbane'}).format();
-    var date = Intl.DateTimeFormat('en-GB', {timeZone: 'Australia/Brisbane'}).format();
-    var day = Intl.DateTimeFormat('en-GB', {weekday:"long", timeZone: 'Australia/Brisbane'}).format();
+    const d = new Date()
+
+    var time = Intl.DateTimeFormat('en-GB', {timeStyle: 'short', timeZone: 'Australia/Brisbane'}).format(d);
+    var date = Intl.DateTimeFormat('en-GB', {timeZone: 'Australia/Brisbane'}).format(d);
+    var day = Intl.DateTimeFormat('en-GB', {weekday:"long", timeZone: 'Australia/Brisbane'}).format(d);
 
     document.getElementById("clock").innerText = time
     document.getElementById("day").innerText = day;
